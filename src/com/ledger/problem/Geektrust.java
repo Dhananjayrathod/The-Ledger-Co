@@ -4,17 +4,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class LedgerProblem {
+public class Geektrust {
 
     final private static String LOAN = "LOAN";
     final private static String BALANCE = "BALANCE";
     final private static String PAYMENT = "PAYMENT";
-    final private static File file = new File("input_data/input1");
     private static HashMap<String, Loan> loanMap = new HashMap<>();
     private static HashMap<String, List<Payment>> paymentMap = new HashMap<>();
 
     public static void main(String[] args) throws FileNotFoundException {
-
+        String filePath = args[0];
+        final File file = new File(filePath);
          if(file.exists()){
              Scanner scanner = new Scanner(file);
              while (scanner.hasNextLine()) {
